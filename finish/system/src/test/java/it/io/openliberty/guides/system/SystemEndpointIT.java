@@ -82,6 +82,14 @@ public class SystemEndpointIT {
         response.close();
     }
 
+    // TODO 
+    @Test
+    public void testPodRestart() {
+        client = ClientBuilder.newClient();
+        WebTarget target = client.target("http://" + clusterIp + ":" + nodePort + "/system/unhealthy");
+        
+    }
+
     /**
      * <p>
      * Returns response information from the specified URL.
